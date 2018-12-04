@@ -31,7 +31,7 @@ class Network:
             # TODO: Compute `loss` as a sum of three losses:
             # - sparse softmax cross entropy of `self.actions` and `logits`,
             #   weighted by `self.returns - tf.stop_gradient(self.values)`.
-            # - negative value of the distribution entropy (use `entropy` method of `tf.distribution.Categorical`)
+            # - negative value of the distribution entropy (use `entropy` method of `tf.distributions.Categorical`)
             #   weighted by `args.entropy_regularization`.
             # - mean square error of the `self.returns` and `self.values`
 
@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
             # TODO: Compute return estimates by
             # - extracting next_states from steps
-            # - computing value function approximatin in next_states
+            # - computing value function approximation in next_states
             # - estimating returns by reward + (0 if done else args.gamma * next_state_value)
 
             # TODO: Train network using current states, chosen actions and estimated returns
